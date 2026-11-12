@@ -50,8 +50,17 @@ const MAP_COLORS = {
   noData: '#94A3B8',
 }
 
-const normalizeName = (name) =>
-  String(name || '').trim().toLowerCase()
+// Normalize district names so GeoJSON labels match backend records.
+const normalizeName = (name) => {
+  const normalized = String(name || '').trim().toLowerCase()
+
+  const districtAliases = {
+    hardwar: 'haridwar',
+    garhwal: 'pauri garhwal',
+  }
+
+  return districtAliases[normalized] || normalized
+}
 
 const getDistrictRank = (district) => {
   if (!district || district.priority_rank == null) return NaN
@@ -366,7 +375,6 @@ export default function DistrictMap() {
               background: MAP_COLORS.background,
             }}
           >
-            {/* Standard OpenStreetMap tiles: no CARTO API-key watermark */}
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
