@@ -4,7 +4,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.database import Base, engine
 import backend.models  # Register all SQLAlchemy models
-
 from backend.routes.districts import router as districts_router
 from backend.routes.rankings import router as rankings_router
 from backend.routes.allocations import router as allocations_router
@@ -13,7 +12,6 @@ from backend.routes.auth import router as auth_router
 from backend.routes.scenarios import router as scenarios_router
 from backend.routes.reports import router as reports_router
 from backend.routes.feedback import router as feedback_router
-
 
 # Create any missing database tables.
 # Existing tables and their data are not deleted.
@@ -29,12 +27,13 @@ app = FastAPI(
     version="1.3.0"
 )
 
-
+# Allow the local development frontend and deployed Vercel website.
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://gov-opt.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
