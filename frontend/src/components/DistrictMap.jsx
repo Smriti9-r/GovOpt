@@ -50,7 +50,7 @@ const MAP_COLORS = {
   noData: '#94A3B8',
 }
 
-// Normalize district names so GeoJSON labels match backend records.
+// Match GeoJSON district names with backend district records.
 const normalizeName = (name) => {
   const normalized = String(name || '').trim().toLowerCase()
 
@@ -60,6 +60,18 @@ const normalizeName = (name) => {
   }
 
   return districtAliases[normalized] || normalized
+}
+
+// Show the correct official district names on the map and dashboard.
+const getDistrictDisplayName = (name) => {
+  const normalized = normalizeName(name)
+
+  const displayNames = {
+    hardwar: 'Haridwar',
+    garhwal: 'Pauri Garhwal',
+  }
+
+  return displayNames[normalized] || String(name || '').trim()
 }
 
 const getDistrictRank = (district) => {
@@ -274,9 +286,10 @@ export default function DistrictMap() {
 
   const onEachDistrict = (feature, layer) => {
     const name = feature.properties?.dtname || 'Unknown district'
+    const displayName = getDistrictDisplayName(name)
 
     layer.bindTooltip(
-      `<div class="govopt-map-tooltip">${name}</div>`,
+      `<div class="govopt-map-tooltip">${displayName}</div>`,
       {
         sticky: true,
         direction: 'top',
@@ -463,7 +476,7 @@ export default function DistrictMap() {
               </div>
 
               <h3 className="mt-1 text-2xl font-extrabold tracking-tight text-[#172554] dark:text-white">
-                {selectedDistrict}
+                {getDistrictDisplayName(selectedDistrict)}
               </h3>
 
               {selectedData && (
@@ -532,7 +545,7 @@ export default function DistrictMap() {
                 </h4>
 
                 <p className="mt-2 text-xs leading-relaxed text-slate-700 dark:text-slate-300">
-                  {selectedDistrict} is ranked{' '}
+                  {getDistrictDisplayName(selectedDistrict)} is ranked{' '}
                   <strong>#{selectedData.priority_rank} among 13 districts</strong>,
                   with a model-assessed development need score of{' '}
                   <strong>{formatNumber(selectedData.revised_need_score)}</strong>.
