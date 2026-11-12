@@ -62,13 +62,13 @@ const normalizeName = (name) => {
   return districtAliases[normalized] || normalized
 }
 
-// Show the correct official district names on the map and dashboard.
+// Display official district names instead of the original GeoJSON labels.
 const getDistrictDisplayName = (name) => {
   const normalized = normalizeName(name)
 
   const displayNames = {
-    hardwar: 'Haridwar',
-    garhwal: 'Pauri Garhwal',
+    haridwar: 'Haridwar',
+    'pauri garhwal': 'Pauri Garhwal',
   }
 
   return displayNames[normalized] || String(name || '').trim()
