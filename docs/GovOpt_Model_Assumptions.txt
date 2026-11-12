@@ -1,0 +1,67 @@
+
+GOVOPT - MODEL METHODOLOGY AND ASSUMPTIONS
+==========================================
+
+1. PROJECT SCOPE
+District-level government resource allocation decision-support
+for the 13 districts of Uttarakhand.
+
+2. DATA
+- Education: reference period 2024-25.
+- Water: assessment year 2024.
+- Healthcare: reporting year not confirmed.
+- Population: 2024 projected population estimates.
+- Population source: Esri India Living Atlas, as recorded
+  in the supplied population dataset.
+
+3. NEED SCORE
+- Education weight: 50%.
+- Water weight: 50%.
+- Education proxy: min-max scaled average enrolment per school.
+- Water dimensions:
+  a. Adequate quantity gap.
+  b. Access/reliability gap: average of functional connections
+     gap and regular supply gap.
+  c. Satisfaction with quantity gap.
+- Each water dimension receives equal weight.
+- Higher score indicates higher relative measured need.
+
+4. ALLOCATION SCENARIOS
+Illustrative total budget: Rs. 500 crore.
+Minimum guarantee: Rs. 20 crore per district.
+Maximum allocation in baseline optimisation: Rs. 70 crore.
+These are demonstration assumptions, not official limits.
+
+5. BASELINE OPTIMISATION
+Objective: maximise the sum of district need score multiplied
+by district allocation.
+Constraints:
+- Total allocation = Rs. 500 crore.
+- Minimum allocation = Rs. 20 crore per district.
+- Maximum allocation = Rs. 70 crore per district.
+
+6. POPULATION-ADJUSTED SCENARIOS
+The remaining budget after minimum guarantees is distributed
+using blended population and need-score shares:
+- 30% population + 70% need.
+- 50% population + 50% need.
+- 70% population + 30% need.
+
+7. LIMITATIONS
+- Need score is an analyst-defined preliminary index.
+- Average enrolment per school is not a direct measure of
+  overcrowding or school capacity.
+- Healthcare indicators are not fully incorporated into
+  the need score.
+- Healthcare capacity and intervention-cost data remain
+  incomplete.
+- Population figures are projections, not a new census.
+- Allocation weights and budget limits are illustrative.
+- Results are decision-support scenarios, not official
+  government funding recommendations.
+- Indicator definitions, denominators and reporting periods
+  require further verification.
+
+8. VALIDATION
+All allocation scenarios must cover 13 districts and
+sum to the Rs. 500 crore budget.

@@ -1,0 +1,398 @@
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --gov-navy: #172554;
+  --gov-red: #DC2626;
+  --gov-silver: #E2E8F0;
+  --gov-bg: #E8EDF4;
+  --gov-blue: #3987BD;
+  --gov-cyan: #20A6B5;
+  --gov-teal: #168C9B;
+  --gov-violet: #8B6CCB;
+  --gov-coral: #E87968;
+  --gov-rose: #D95778;
+
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: #172554;
+  background: #E8EDF4;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scrollbar-color: #568EBA #E8EDF4;
+  scrollbar-width: thin;
+}
+
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ─── Layout Shells ─────────────────────────────────────────── */
+.gov-shell {
+  min-height: 100vh;
+}
+
+.gov-card {
+  isolation: isolate;
+}
+
+.gov-sidebar {
+  will-change: width, transform;
+}
+
+/* ─── Selection ─────────────────────────────────────────────── */
+::selection {
+  color: white;
+  background: #7C5BC4;
+}
+
+/* ─── Focus ─────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 3px solid rgb(32 166 181 / 55%);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ─── Colourful Scrollbars ──────────────────────────────────── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #568EBA transparent;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E8EDF4;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #20A6B5 0%,
+    #568EBA 35%,
+    #8B6CCB 70%,
+    #E87968 100%
+  );
+  border: 2px solid #E8EDF4;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    #168C9B 0%,
+    #3987BD 35%,
+    #7552B8 70%,
+    #D95778 100%
+  );
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.dark {
+  scrollbar-color: #647FBA #111C30;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #111C30;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    #35B8C2 0%,
+    #568EBA 35%,
+    #9B83D5 70%,
+    #E87986 100%
+  );
+  border-color: #111C30;
+}
+
+/* ─── Card Details ───────────────────────────────────────────── */
+.gov-card {
+  transition:
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.gov-card:hover {
+  border-color: rgb(86 142 186 / 35%);
+}
+
+.priority-bar {
+  box-shadow: 0 1px 5px rgb(23 37 84 / 14%);
+}
+
+/* ─── Leaflet Overrides ─────────────────────────────────────── */
+.leaflet-container {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  z-index: 0;
+}
+
+.leaflet-tooltip {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  background: #172554 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 5px 10px !important;
+  box-shadow: 0 4px 14px rgb(0 0 0 / 25%) !important;
+}
+
+.leaflet-tooltip::before {
+  border-top-color: #172554 !important;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 12%) !important;
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+
+.leaflet-control-zoom a {
+  font-weight: 700 !important;
+  color: #172554 !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: #EAF4FA !important;
+}
+
+/* ─── Global Range Input ────────────────────────────────────── */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #3987BD 0%,
+    #20A6B5 35%,
+    #8B6CCB 70%,
+    #E87968 100%
+  );
+  outline: none;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 4px solid #3987BD;
+  box-shadow: 0 1px 5px rgb(23 37 84 / 25%);
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  border-color: #8B6CCB;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 4px solid #3987BD;
+  box-shadow: 0 1px 5px rgb(23 37 84 / 25%);
+  cursor: pointer;
+}
+
+.dark input[type='range'] {
+  background: linear-gradient(
+    90deg,
+    #3987BD 0%,
+    #20A6B5 35%,
+    #8B6CCB 70%,
+    #E87968 100%
+  );
+}
+
+/* ─── Gov Table ─────────────────────────────────────────────── */
+.gov-table thead {
+  background: #172554;
+  color: white;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gov-table thead th {
+  padding: 13px 20px;
+  white-space: nowrap;
+}
+
+.gov-table tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.15s;
+}
+
+.gov-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.gov-table tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+.gov-table tbody tr:hover {
+  background: #edf6fb !important;
+}
+
+.gov-table tbody td {
+  padding: 13px 20px;
+  font-size: 13px;
+}
+
+.gov-table tfoot {
+  background: #f8fafc;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.gov-table tfoot td {
+  padding: 13px 20px;
+  border-top: 2px solid #e2e8f0;
+}
+
+/* Dark mode table */
+.dark .gov-table thead {
+  background: #172554;
+}
+
+.dark .gov-table tbody tr {
+  border-bottom-color: #1e293b;
+}
+
+.dark .gov-table tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.dark .gov-table tbody tr:hover {
+  background: rgba(39, 64, 91, 0.55) !important;
+}
+
+.dark .gov-table tfoot {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+.dark .gov-table tfoot td {
+  border-top-color: #1e293b;
+}
+
+/* ─── Skeleton Shimmer ──────────────────────────────────────── */
+@keyframes shimmer {
+  0% {
+    background-position: -300% 0;
+  }
+  100% {
+    background-position: 300% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #e2e8f0 0%,
+    #dbeafe 25%,
+    #ede9fe 50%,
+    #fce7f3 75%,
+    #e2e8f0 100%
+  );
+  background-size: 300% 100%;
+  animation: shimmer 1.6s infinite;
+  border-radius: 8px;
+}
+
+.dark .skeleton {
+  background: linear-gradient(
+    90deg,
+    #1e293b 0%,
+    #263d5b 25%,
+    #3a315c 50%,
+    #493047 75%,
+    #1e293b 100%
+  );
+  background-size: 300% 100%;
+}
+
+/* ─── Fade-in Animation ─────────────────────────────────────── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.25s ease-out both;
+}
+
+/* ─── Reduced Motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,14 @@
+district,education_enrolment_per_school,water_adequacy,functional_tap_connections,water_regularity,water_quantity_satisfaction,healthcare_nonzero_indicators,high_enrolment_signal,water_adequacy_gap,functional_connection_gap,water_regularity_gap,quantity_satisfaction_gap
+Almora,44.82,100.0,91.7,93.5,94.8,249,False,False,False,False,False
+Bageshwar,48.68,100.0,91.4,94.1,90.0,233,False,False,False,False,False
+Chamoli,44.73,54.5,54.5,74.1,84.1,240,False,True,True,True,False
+Champawat,61.6,100.0,82.7,82.7,82.7,229,False,False,False,False,False
+Dehradun,176.3,99.4,82.9,82.9,91.1,277,True,False,False,False,False
+Haridwar,204.36,100.0,76.9,88.8,89.6,269,True,False,True,False,False
+Nainital,115.91,96.1,84.2,84.2,95.8,278,False,False,False,False,False
+Pauri Garhwal,42.88,71.4,64.4,64.4,77.4,261,False,True,True,True,False
+Pithoragarh,46.47,97.2,72.6,80.0,88.9,237,False,False,True,False,False
+Rudraprayag,45.53,100.0,75.2,75.2,83.2,253,False,False,True,True,False
+Tehri Garhwal,46.42,94.4,68.0,68.0,48.4,248,False,False,True,True,True
+Udham Singh Nagar,190.73,100.0,76.2,76.2,77.7,242,True,False,True,True,False
+Uttarkashi,51.2,70.8,66.0,66.0,82.3,241,False,True,True,True,False

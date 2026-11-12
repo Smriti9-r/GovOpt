@@ -1,0 +1,42 @@
+category,indicator,source_column,match,nonzero,zero,missing,fractional,minimum,maximum
+Disease,Inpatient - Dengue,Inpatient - Dengue,EXACT,8,5,0,0,0.0,124.0
+Disease,Inpatient - Malaria,Inpatient - Malaria,EXACT,7,6,0,0,0.0,201.0
+Disease,Kala Azar (RDT) - Tests Conducted,Kala Azar (RDT) - Tests Conducted,EXACT,0,13,0,0,0.0,0.0
+Disease,Kala Azar Positive Cases,Kala Azar Positive Cases,EXACT,0,13,0,0,0.0,0.0
+Disease,Malaria (Microscopy Tests ) - Plasmodium Falciparum test positive,Malaria (Microscopy Tests ) - Plasmodium Falciparum test positive,EXACT,0,13,0,0,0.0,0.0
+Disease,Malaria (Microscopy Tests ) - Plasmodium Vivax test positive,Malaria (Microscopy Tests ) - Plasmodium Vivax test positive,EXACT,4,9,0,0,0.0,105.0
+Disease,Malaria (RDT) - Plamodium Falciparum test positive,Malaria (RDT) - Plamodium Falciparum test positive,EXACT,1,12,0,0,0.0,2.0
+Disease,Malaria (RDT) - Plasmodium Vivax test positive,Malaria (RDT) - Plasmodium Vivax test positive,EXACT,3,10,0,0,0.0,10.0
+Disease,Number of Adolscent / Adult deaths due to Cancer,Number of Adolscent / Adult deaths due to Cancer,EXACT,11,2,0,1,0.0,39.0
+Disease,Number of Adolscent / Adult deaths due to Diarrhoeal diseases,Number of Adolscent / Adult deaths due to Diarrhoeal diseases,EXACT,10,3,0,1,0.0,9.0
+Disease,Number of Adolscent / Adult deaths due to HIV/AIDS,Number of Adolscent / Adult deaths due to HIV/AIDS,EXACT,5,8,0,1,0.0,12.0
+Disease,Number of Adolscent / Adult deaths due to Respiratory diseases including infections (other than TB),Number of Adolscent / Adult deaths due to Respiratory diseases including infections (other than TB),EXACT,11,2,0,1,0.0,190.0
+Disease,Number of Adolscent / Adult deaths due to Tuberculosis,Number of Adolscent / Adult deaths due to Tuberculosis,EXACT,8,5,0,1,0.0,70.0
+Disease,Number of Child Deaths (1 -5 years) due to Diarrhoea,Number of Child Deaths (1 -5 years) due to Diarrhoea,EXACT,5,8,0,1,0.0,3.0
+Disease,Number of Child Deaths (1 -5 years) due to Pneumonia,Number of Child Deaths (1 -5 years) due to Pneumonia,EXACT,6,7,0,0,0.0,4.0
+Disease,Number of Deaths due to Dengue,Number of Deaths due to Dengue,EXACT,3,10,0,2,0.0,1.0
+Disease,Number of Deaths due to Japanese Encephalitis (JE),Number of Deaths due to Japanese Encephalitis (JE),EXACT,0,13,0,0,0.0,0.0
+Disease,Number of Deaths due to Kala Azar,Number of Deaths due to Kala Azar,EXACT,3,10,0,2,0.0,1.0
+Disease,Number of Deaths due to Malaria- Plasmodium Falciparum,Number of Deaths due to Malaria- Plasmodium Falciparum,EXACT,0,13,0,0,0.0,0.0
+Disease,Number of Deaths due to Malaria- Plasmodium Vivax,Number of Deaths due to Malaria- Plasmodium Vivax,EXACT,0,13,0,0,0.0,0.0
+Disease,Number of Home Deliveries attended by Non SBA (Trained Birth Attendant(TBA) /Relatives/etc.),Number of Home Deliveries attended by Non SBA (Trained Birth Attendant(TBA) /Relatives/etc.),EXACT,13,0,0,0,21.0,5161.0
+Disease,Number of Infant Deaths (1 -12 months) due to Diarrhoea,Number of Infant Deaths (1 -12 months) due to Diarrhoea,EXACT,7,6,0,1,0.0,8.0
+Disease,Number of Infant Deaths (1 -12 months) due to Pneumonia,Number of Infant Deaths (1 -12 months) due to Pneumonia,EXACT,10,3,0,1,0.0,11.0
+Disease,Number of children more than 16 months of age who received Japanese Encephalitis (JE) vaccine,Number of children more than 16 months of age who received Japanese Encephalitis (JE) vaccine,EXACT,2,11,0,1,0.0,28867.0
+Disease,Number of pregnant women screened for HIV (by finger prick test),Number of pregnant women screened for HIV (by finger prick test),EXACT,13,0,0,0,3363.0,41223.0
+Disease,"Out of the above number screened positive, number confirmed with HIV infection at Integrated Counselling and Testing Centre (ICTC)","Out of the above number screened positive, number confirmed with HIV infection at Integrated Counselling and Testing Centre (ICTC)",EXACT,8,5,0,0,0.0,728.0
+Disease,Outborn - Female,Outborn - Female,EXACT,6,7,0,0,0.0,291.0
+Disease,Outborn – Male,Outborn – Male,EXACT,7,6,0,0,0.0,506.0
+Disease,RDT conducted for Malaria,RDT conducted for Malaria,EXACT,12,1,0,0,0.0,5402.0
+Disease,Total Blood Smears Examined for Malaria,Total Blood Smears Examined for Malaria,EXACT,13,0,0,0,72.0,8397.0
+Infrastructure,Number of Anganwadi centres/ UPHCs reported to have conducted Village Health & Nutrition Day (VHNDs)/ Urban Health & Nutrition Day (UHNDs)/ Outreach / Special Outreach,Number of Anganwadi centres/ UPHCs reported to have conducted Village Health & Nutrition Day (VHNDs)/ Urban Health & Nutrition Day (UHNDs)/ Outreach / Special Outreach,EXACT,13,0,0,0,2792.0,12178.0
+Infrastructure,Number of Home Deliveries attended by Skill Birth Attendant(SBA) (Doctor/Nurse/ANM/ Midwife),Number of Home Deliveries attended by Skill Birth Attendant(SBA) (Doctor/Nurse/ANM/ Midwife),EXACT,13,0,0,0,2.0,1421.0
+Infrastructure,Number of Lab Tests done,Number of Lab Tests done,EXACT,13,0,0,0,22832.0,1113124.0
+Infrastructure,Number of Maternal Deaths due to Obstructed/prolonged labour,Number of Maternal Deaths due to Obstructed/prolonged labour,EXACT,4,9,0,1,0.0,4.0
+Infrastructure,Number of PW given ANC Corticosteroids in Pre Term Labour,Number of PW given ANC Corticosteroids in Pre Term Labour,EXACT,12,1,0,0,0.0,1420.0
+Infrastructure,Number of Pregnant Women provided - Free Home to facility transport under JSSK,Number of Pregnant Women provided - Free Home to facility transport under JSSK,EXACT,13,0,0,0,556.0,8951.0
+Infrastructure,Number of Pregnant Women provided - Interfacility transfers when needed under JSSK,Number of Pregnant Women provided - Interfacility transfers when needed under JSSK,EXACT,12,1,0,0,0.0,2159.0
+Infrastructure,Number of sick infants provided - Free Home to facility transport under JSSK,Number of sick infants provided - Free Home to facility transport under JSSK,EXACT,12,1,0,0,0.0,378.0
+Infrastructure,Number of sick infants provided - Interfacility transfers when needed under JSSK,Number of sick infants provided - Interfacility transfers when needed under JSSK,EXACT,11,2,0,0,0.0,545.0
+Infrastructure,Patient Satisfaction Score of the facility in percentage (from Mera Aspatal),Patient Satisfaction Score of the facility in percentage (from Mera Aspatal),EXACT,2,11,0,0,0.0,36.0
+Infrastructure,Total Facility Based Maternal Death Reviews (FBMDR) done,Total Facility Based Maternal Death Reviews (FBMDR) done,EXACT,7,6,0,0,0.0,29.0

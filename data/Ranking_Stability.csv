@@ -1,0 +1,14 @@
+district,average_rank,best_rank,worst_rank,top_3_appearances,top_5_appearances
+Haridwar,1.4,1,2,5,5
+Udham Singh Nagar,1.6,1,2,5,5
+Dehradun,3.0,3,3,5,5
+Nainital,4.8,4,8,0,4
+Chamoli,5.4,4,7,0,3
+Uttarkashi,5.8,5,7,0,2
+Tehri Garhwal,6.6,5,8,0,1
+Pauri Garhwal,8.0,7,9,0,0
+Champawat,8.4,6,9,0,0
+Rudraprayag,10.2,10,11,0,0
+Pithoragarh,10.8,10,11,0,0
+Bageshwar,12.0,12,12,0,0
+Almora,13.0,13,13,0,0

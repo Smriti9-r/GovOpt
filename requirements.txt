@@ -1,0 +1,10 @@
+
+fastapi
+uvicorn[standard]
+SQLAlchemy
+psycopg[binary]
+python-dotenv
+pandas
+reportlab
+PyJWT
+pwdlib[argon2]
